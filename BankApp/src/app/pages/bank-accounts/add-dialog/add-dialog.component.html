@@ -1,0 +1,12 @@
+<div class="page">
+    <h2>Edit Bank Account Info</h2>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 300px;">
+        <mat-label>Card Holder Name</mat-label>
+        <input matInput [(ngModel)]="account.cardHolderName" value="{{account.cardHolderName}}">
+    </mat-form-field>
+    <div class="buttons">
+        <button class="btn" mat-button (click)="edit()">Save</button>
+        <button class="btn" mat-button (click)="closeDialog()">Cancel</button>
+    </div>
+</div>
+
