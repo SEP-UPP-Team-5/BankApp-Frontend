@@ -26,6 +26,7 @@ export class LandingPageComponent implements OnInit {
     },
     error => {
       this.snackbar.open("Successfully added Bank Acc.", 'OK');
+      this.account.cardHolderName = '';
     },
     () => {
       this.snackbar.open("Successfully added Bank Acc.", 'OK');

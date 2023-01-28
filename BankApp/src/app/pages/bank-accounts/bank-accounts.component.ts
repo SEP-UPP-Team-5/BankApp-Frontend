@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BankAccountDto } from 'src/model/bank-account-dto';
 import { BankAccountService } from 'src/services/bank-account.service';
@@ -15,7 +16,8 @@ export class BankAccountsComponent implements OnInit {
   public accounts: any;
 
   constructor(private router: Router,
-    private bankService: BankAccountService) { }
+    private bankService: BankAccountService,
+    private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getBankAccounts();
@@ -30,5 +32,19 @@ export class BankAccountsComponent implements OnInit {
       error: (err) => { console.log(err) }
     })
   }
+
+  deleteBankAcc(id: any): void {
+    this.bankService.deleteAccount(id).subscribe((res: any) => {
+      console.log(res);
+    },
+    error => {
+      this.snackbar.open("Successfully deleted Bank Account", 'OK', {"duration": 5000});
+      window.location.reload()
+    },
+    () => {
+      this.snackbar.open("Successfully deleted Account.", 'OK', {"duration": 5000});
+      window.location.reload()
+    }
+  )}
 
 }

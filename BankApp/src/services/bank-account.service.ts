@@ -24,4 +24,9 @@ export class BankAccountService {
        return item;
       }))
   }
+
+  deleteAccount(id: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.GET;
+    return this.http.delete(apiUrl + "/" + id);
+  }
 }
