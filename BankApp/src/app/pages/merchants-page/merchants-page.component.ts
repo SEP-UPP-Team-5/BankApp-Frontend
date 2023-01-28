@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MerchantDto } from 'src/model/merchant-dto';
 import { MerchantService } from 'src/services/merchant.service';
@@ -14,7 +15,8 @@ export class MerchantsPageComponent implements OnInit {
   dataSource: any;
 
   constructor(private router: Router,
-    private merchantService: MerchantService) { }
+    private merchantService: MerchantService,
+    private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getMerchants();
@@ -29,5 +31,19 @@ export class MerchantsPageComponent implements OnInit {
       error: (err) => { console.log(err) }
     })
   }
+
+  createMerchant(): void {
+    this.merchantService.addMerchant({}).subscribe((res: any) => {
+      console.log(res);
+    },
+    error => {
+      this.snackbar.open("Successfully added Merchant", 'OK');
+      this.router.navigateByUrl('')
+    },
+    () => {
+      this.snackbar.open("Successfully added Bank Merchant.", 'OK');
+      this.router.navigateByUrl('')
+    }
+  )}
 
 }

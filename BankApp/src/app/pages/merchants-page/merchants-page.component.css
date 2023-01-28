@@ -5,6 +5,24 @@
     flex-direction: column;
 }
 
+.btn-add {
+    margin: 0 auto;
+    margin-top: 2%;
+    font-size: 18px;
+    background-color: #BDC6D1;
+    color: #5C6378;
+    width: 15%;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.naslov {
+    color: #2B2D42;
+    text-align: center;
+    margin-top: 3%;
+}
+
 
 th {
     color: #D80032;
@@ -17,9 +35,9 @@ td {
 }
 
 .table-cont {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 2%;
 }
 
 .no-data-row {

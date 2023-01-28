@@ -17,4 +17,11 @@ export class MerchantService {
       return data && data.map((elem: MerchantDto) => new MerchantDto(elem)) || [];
     }))
   }
+
+  addMerchant(input?: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.MERCHANT.ADD;
+    return this.http.post(apiUrl, input).pipe(map((item: any) => {
+       return item;
+      }))
+  }
 }

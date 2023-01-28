@@ -5,6 +5,12 @@
     flex-direction: column;
 }
 
+.naslov {
+    color: #2B2D42;
+    text-align: center;
+    margin-top: 3%;
+}
+
 
 th {
     color: #D80032;
@@ -19,7 +25,7 @@ td {
 .table-cont {
     width: 70%;
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 3%;
 }
 
 .no-data-row {
