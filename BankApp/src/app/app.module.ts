@@ -18,6 +18,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddDialogComponent } from './pages/bank-accounts/add-dialog/add-dialog.component';
 import {MatInputModule} from '@angular/material/input';
+import { CardInfoComponent } from './pages/card-info/card-info.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatInputModule} from '@angular/material/input';
     LandingPageComponent,
     BankAccountsComponent,
     MerchantsPageComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    CardInfoComponent
   ],
   imports: [
     BrowserModule,
