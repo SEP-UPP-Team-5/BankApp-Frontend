@@ -24,4 +24,9 @@ export class MerchantService {
        return item;
       }))
   }
+
+  deleteMerchant(id: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.MERCHANT.GET;
+    return this.http.delete(apiUrl + "/" + id);
+  }
 }

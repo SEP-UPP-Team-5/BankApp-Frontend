@@ -37,13 +37,26 @@ export class MerchantsPageComponent implements OnInit {
       console.log(res);
     },
     error => {
-      this.snackbar.open("Successfully added Merchant", 'OK');
-      this.router.navigateByUrl('')
+      this.snackbar.open("Successfully added Merchant", 'OK', {"duration": 5000});
+      window.location.reload()
     },
     () => {
-      this.snackbar.open("Successfully added Bank Merchant.", 'OK');
-      this.router.navigateByUrl('')
+      this.snackbar.open("Successfully added Merchant.", 'OK', {"duration": 5000});
+      window.location.reload()
     }
   )}
 
+  deleteMerchant(id: any): void {
+    this.merchantService.deleteMerchant(id).subscribe((res: any) => {
+      console.log(res);
+    },
+    error => {
+      this.snackbar.open("Successfully deleted Merchant", 'OK', {"duration": 5000});
+      window.location.reload()
+    },
+    () => {
+      this.snackbar.open("Successfully deleted Merchant.", 'OK', {"duration": 5000});
+      window.location.reload()
+    }
+  )}
 }
