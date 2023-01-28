@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { BankAccountsComponent } from './pages/bank-accounts/bank-accounts.component';
 import {MatTableModule} from '@angular/material/table';
+import { MerchantsPageComponent } from './pages/merchants-page/merchants-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatTableModule} from '@angular/material/table';
     FooterComponent,
     NavBarComponent,
     LandingPageComponent,
-    BankAccountsComponent
+    BankAccountsComponent,
+    MerchantsPageComponent
   ],
   imports: [
     BrowserModule,

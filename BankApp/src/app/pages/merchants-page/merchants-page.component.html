@@ -8,18 +8,8 @@
             </ng-container>
           
             <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Card Holder Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.cardHolderName}} </td>
-            </ng-container>
-   
-            <ng-container matColumnDef="valid">
-              <th mat-header-cell *matHeaderCellDef> Valid Until </th>
-              <td mat-cell *matCellDef="let element"> {{element.validUntil}} </td>
-            </ng-container>
-     
-            <ng-container matColumnDef="pan">
-              <th mat-header-cell *matHeaderCellDef> Pan number </th>
-              <td mat-cell *matCellDef="let element"> {{element.panNumber}} </td>
+              <th mat-header-cell *matHeaderCellDef> Merchant Id </th>
+              <td mat-cell *matCellDef="let element"> {{element.merchantId}} </td>
             </ng-container>
 
             <ng-container matColumnDef="balance">
@@ -27,10 +17,14 @@
                 <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
             </ng-container>
 
+            <ng-container matColumnDef="funds">
+                <th mat-header-cell *matHeaderCellDef> Reserved funds </th>
+                <td mat-cell *matCellDef="let element"> {{element.reservedFunds}} </td>
+            </ng-container>
+
              <ng-container matColumnDef="action">
-                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <th mat-header-cell *matHeaderCellDef> Action </th>
                 <td mat-cell *matCellDef="let element">
-                    <button class="btn" mat-raised-button>Edit</button>
                     <button class="btn" mat-button>Delete</button>
                 </td>
             </ng-container>
@@ -39,8 +33,9 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
             <tr class="mat-row no-data-row" *matNoDataRow>
-                <td class="mat-cell" colspan="6" style="padding: 20px;">No data available in table</td>
+                <td class="mat-cell" colspan="5" style="padding: 20px;">No data available in table</td>
             </tr>
           </table>     
     </div> 
 </div>
+

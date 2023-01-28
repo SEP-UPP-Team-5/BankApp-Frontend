@@ -4,5 +4,10 @@ export const AppConstants = {
    BANK_ACC : {
        ADD: '/bankAccounts',
        GET: '/bankAccounts',
+   },
+   MERCHANT: {
+        ADD: '/merchants',
+        GET: '/merchants',
    }
+
 }
