@@ -13,6 +13,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { BankAccountsComponent } from './pages/bank-accounts/bank-accounts.component';
 import {MatTableModule} from '@angular/material/table';
 import { MerchantsPageComponent } from './pages/merchants-page/merchants-page.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MerchantsPageComponent } from './pages/merchants-page/merchants-page.co
     FormsModule,
     HttpClientModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

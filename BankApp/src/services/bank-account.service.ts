@@ -17,4 +17,11 @@ export class BankAccountService {
       return data && data.map((elem: BankAccountDto) => new BankAccountDto(elem)) || [];
     }))
   }
+
+  addBankAccount(input: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.ADD;
+    return this.http.post(apiUrl, input).pipe(map((item: any) => {
+       return item;
+      }))
+  }
 }

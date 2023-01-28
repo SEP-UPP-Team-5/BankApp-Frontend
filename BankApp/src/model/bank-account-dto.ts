@@ -1,11 +1,11 @@
 export class BankAccountDto {
     id: number;
-    panNumber: number;
-    securityCode: number;
+    panNumber: any;
+    securityCode: any;
     cardHolderName: string;
-    validUntil: Date;
-    balance: number;
-    reservedFunds: number;
+    validUntil: any;
+    balance: any;
+    reservedFunds: any;
 
     constructor(obj?:any) {
         this.id = obj && obj.id || 0;
