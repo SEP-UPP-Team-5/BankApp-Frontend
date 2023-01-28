@@ -19,6 +19,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddDialogComponent } from './pages/bank-accounts/add-dialog/add-dialog.component';
 import {MatInputModule} from '@angular/material/input';
 import { CardInfoComponent } from './pages/card-info/card-info.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from "@angular/material-moment-adapter";
 
 @NgModule({
   declarations: [
@@ -42,9 +45,13 @@ import { CardInfoComponent } from './pages/card-info/card-info.component';
     MatDialogModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } } 
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

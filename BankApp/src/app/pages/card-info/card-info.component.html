@@ -11,26 +11,28 @@
             <mat-card-content>
                 <mat-form-field class="example-full-width" appearance="outline" style="width: 501px;">
                     <mat-label>Card Holder Name</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="cardInfo.cardHolderName">
                 </mat-form-field>
                 <div style="display: flex;">
                     <mat-form-field class="example-full-width" appearance="outline" style="width: 350px;">
                         <mat-label>PAN</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="cardInfo.pan">
                     </mat-form-field>
                     <mat-form-field class="example-full-width" appearance="outline" style="width: 157px;">
                         <mat-label>Security Code</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="cardInfo.securityCode">
                     </mat-form-field>
                 </div>
                 <mat-form-field class="example-full-width" appearance="outline" style="width: 501px;">
                     <mat-label>Valid until</mat-label>
-                    <input matInput>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="cardInfo.validUntil">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </mat-card-content>
             <mat-card-actions>
               <button class="btn" mat-button>Cancel</button>
-              <button class="btn" mat-button>Pay</button>
+              <button class="btn" mat-button (click)="execute()">Pay</button>
             </mat-card-actions>
           </mat-card>
     </div>

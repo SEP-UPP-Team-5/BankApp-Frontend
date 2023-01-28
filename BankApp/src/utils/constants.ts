@@ -8,6 +8,9 @@ export const AppConstants = {
    MERCHANT: {
         ADD: '/merchants',
         GET: '/merchants',
+   },
+   PAYMENT: {
+    EXECUTE: '/payment/execute'
    }
 
 }
