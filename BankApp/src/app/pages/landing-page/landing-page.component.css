@@ -1,0 +1,104 @@
+*{
+    color: #546A7B;
+}
+
+h1 {
+    color: #FDFDFF;
+    font-size: 30px;
+}
+
+span {
+    color: #2B2D42;
+}
+
+.text {
+    color: #FDFDFF;
+}
+
+.background-radial-gradient {
+    margin-top: 4%;
+    position: relative; 
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control:focus {
+    border-color: #546A7B;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 117, 119, 0.75);
+}
+
+.form-check-input:focus {
+    border-color: #546A7B;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 117, 119, 0.75);
+}
+
+.form-check-input {
+    background-color: #546A7B;
+    border: #546A7B;
+}
+
+.btn {
+    font-size: 18px;
+    background-color: #5C6378;
+    color: #BDC6D1;
+    width: 30%;
+}
+
+.btn:hover {
+    background-color: #BDC6D1;
+    color: white;
+}
+
+.background-radial-gradient::before {    
+      content: "";
+      /* background-image: url("/assets/images/wallpaper.jpg"); */
+      background-size: cover;
+      background-color: #8D99AE;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+}
+
+.card {
+    position: relative;
+    background-color: rgba(229, 230, 228, 0.9);
+    border: none;
+}
+
+h2,p {
+    color: #546A7B;
+}
+
+.slicice {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.example-card {
+    width: 25%;
+    margin: 5%;
+}
+
+.opis {
+    margin: 5%;
+    margin-top: 3%;
+}
+
+.naslov {
+    color: #5C6378;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.descr {
+    padding: 5px;
+    text-align: center;
+}
+
