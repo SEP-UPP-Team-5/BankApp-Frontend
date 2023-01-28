@@ -10,13 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { BankAccountsComponent } from './pages/bank-accounts/bank-accounts.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavBarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    BankAccountsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

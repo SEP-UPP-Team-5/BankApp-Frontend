@@ -1,8 +1,8 @@
 <nav class="navbar navbar-light justify-content-between">
     <a class="navbar-brand">SEP Bank</a>
     <div>
-        <button class="btn" type="submit">Home</button>
-        <button class="btn" type="submit">Bank Accounts</button>
+        <button *ngIf="btnHome" class="btn" type="submit" (click)="goToHome()">Home</button>
+        <button *ngIf="btnBanks" class="btn" type="submit" (click)="goToBankAccounts()">Bank Accounts</button>
     </div>
 </nav>
 
