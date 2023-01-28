@@ -18,6 +18,11 @@ export class BankAccountService {
     }))
   }
 
+  getById(id: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.GET;
+    return this.http.get(apiUrl + "/" + id);
+  }
+
   addBankAccount(input: any) {
     const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.ADD;
     return this.http.post(apiUrl, input).pipe(map((item: any) => {
@@ -28,5 +33,10 @@ export class BankAccountService {
   deleteAccount(id: any) {
     const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.GET;
     return this.http.delete(apiUrl + "/" + id);
+  }
+
+  editAccount(id: any, input: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.BANK_ACC.GET;
+    return this.http.put(apiUrl + "/" + id, input);
   }
 }

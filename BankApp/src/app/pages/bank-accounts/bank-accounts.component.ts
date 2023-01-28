@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BankAccountDto } from 'src/model/bank-account-dto';
 import { BankAccountService } from 'src/services/bank-account.service';
+import { AddDialogComponent } from './add-dialog/add-dialog.component';
 
 @Component({
   selector: 'app-bank-accounts',
@@ -17,7 +19,8 @@ export class BankAccountsComponent implements OnInit {
 
   constructor(private router: Router,
     private bankService: BankAccountService,
-    private snackbar: MatSnackBar) { }
+    private snackbar: MatSnackBar,
+    public dialog: MatDialog,) { }
 
   ngOnInit(): void {
     this.getBankAccounts();
@@ -31,6 +34,18 @@ export class BankAccountsComponent implements OnInit {
       },
       error: (err) => { console.log(err) }
     })
+  }
+
+  openEditDialog(id: any) {
+    const dialogRef = this.dialog.open(AddDialogComponent, {
+      width: '500px',
+      autoFocus: false,
+      data: {id: id}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   deleteBankAcc(id: any): void {

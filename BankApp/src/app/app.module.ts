@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,8 @@ import {MatTableModule} from '@angular/material/table';
 import { MerchantsPageComponent } from './pages/merchants-page/merchants-page.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AddDialogComponent } from './pages/bank-accounts/add-dialog/add-dialog.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     NavBarComponent,
     LandingPageComponent,
     BankAccountsComponent,
-    MerchantsPageComponent
+    MerchantsPageComponent,
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatCardModule,
     MatTableModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
