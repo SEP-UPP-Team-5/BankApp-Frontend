@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: "landing", component:  LandingPageComponent},
   { path: "bankAcc", component:  BankAccountsComponent},
   { path: "merchant", component:  MerchantsPageComponent},
-  { path: "card", component:  CardInfoComponent},
+  { path: "card/:id", component:  CardInfoComponent},
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
 ];
 
