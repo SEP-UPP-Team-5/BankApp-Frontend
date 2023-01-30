@@ -10,7 +10,9 @@ export const AppConstants = {
         GET: '/merchants',
    },
    PAYMENT: {
-    EXECUTE: '/payment/execute'
+    EXECUTE: '/payment/execute',
+    QR: '/payment/execute/qrPayment',
+    GET_QR: '/qrCode'
    }
 
 }

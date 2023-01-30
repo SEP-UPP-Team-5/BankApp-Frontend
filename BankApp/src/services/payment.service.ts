@@ -16,5 +16,17 @@ export class PaymentService {
        return item;
       }))
   }
+
+  executeQr(img: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.PAYMENT.QR;
+    return this.http.post(apiUrl, img).pipe(map((item: any) => {
+       return item;
+      }))
+  }
+
+  getQr(id: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.PAYMENT.GET_QR;
+    return this.http.get(apiUrl + "/" + id, {responseType: 'blob'});
+  }
   
 }
