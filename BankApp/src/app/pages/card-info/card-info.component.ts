@@ -24,10 +24,12 @@ export class CardInfoComponent implements OnInit {
   }
 
   execute(): void {
-    //this.cardInfo.validUntil = "2024-01-01T00:00:00.000000000"
+    //this.cardInfo.validUntil = "2024-01-01 00:00:00"
     this.cardInfo.paymentId = this.id;
+    console.log(this.cardInfo);
     this.paymentService.execute(this.cardInfo).subscribe((res: any) => {
       console.log(res);
+      window.location.href = res.url;
     }
   )}
 }

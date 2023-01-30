@@ -1,0 +1,7 @@
+.page {
+    display: flex;
+    align-items: center;
+    margin-left: 22%;
+    margin-right: 25%;
+    height: 90vh;
+}

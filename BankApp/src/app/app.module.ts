@@ -22,6 +22,7 @@ import { CardInfoComponent } from './pages/card-info/card-info.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from "@angular/material-moment-adapter";
+import { QrCodeComponent } from './pages/qr-code/qr-code.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from "@angular/m
     BankAccountsComponent,
     MerchantsPageComponent,
     AddDialogComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    QrCodeComponent
   ],
   imports: [
     BrowserModule,
