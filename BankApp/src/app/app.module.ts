@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
@@ -41,6 +41,7 @@ import { QrCodeComponent } from './pages/qr-code/qr-code.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
     MatTableModule,

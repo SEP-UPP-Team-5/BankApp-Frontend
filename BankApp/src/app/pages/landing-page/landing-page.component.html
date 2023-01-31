@@ -24,11 +24,15 @@
                 <p>Create new account at SEP Bank</p>
               </div>
               
-              <div>
+              <div  [formGroup]="myForm">
                 <div class="form-group mb-4">
                   <label for="exampleInputEmail1">Card Holder Name</label>
-                  <input type="text" [(ngModel)]="account.cardHolderName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                  <!-- <input type="text" [(ngModel)]="account.cardHolderName"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""> -->
+                  <input type="text" formControlName="cardHolderName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                   <small id="emailHelp" class="form-text text-muted"></small>
+                  <div style="color: red;" *ngIf="myForm.controls['cardHolderName'].invalid && myForm.controls['cardHolderName'].touched">
+                    Card Holder Name is required and must contain only characters.
+                </div>
                 </div>
   
                 <div class="d-flex justify-content-center">
