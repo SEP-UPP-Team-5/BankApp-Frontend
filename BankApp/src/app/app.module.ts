@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
@@ -18,6 +18,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddDialogComponent } from './pages/bank-accounts/add-dialog/add-dialog.component';
 import {MatInputModule} from '@angular/material/input';
+import { CardInfoComponent } from './pages/card-info/card-info.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from "@angular/material-moment-adapter";
+import { QrCodeComponent } from './pages/qr-code/qr-code.component';
 
 @NgModule({
   declarations: [
@@ -27,22 +32,29 @@ import {MatInputModule} from '@angular/material/input';
     LandingPageComponent,
     BankAccountsComponent,
     MerchantsPageComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    CardInfoComponent,
+    QrCodeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
     MatTableModule,
     MatDialogModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } } 
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

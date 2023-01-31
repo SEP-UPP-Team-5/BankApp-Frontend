@@ -1,0 +1,29 @@
+.page {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+.qr {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    font-size: 18px;
+    background-color: #BDC6D1;
+    color: #5C6378;
+    width: 200px;
+    margin: 0 auto;
+}

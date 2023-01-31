@@ -1,0 +1,40 @@
+.page {
+    display: flex;
+    align-items: center;
+    margin-left: 22%;
+    margin-right: 25%;
+    height: 90vh;
+}
+
+mat-card {
+    width: 600px;
+    height: 480px;
+    margin-left: 10%;
+    align-items: center;
+    background-color: #EDF2F4;
+}
+
+.example-full-width {
+    margin-right: 1%;
+}
+
+mat-card-title {
+    text-align: center;
+    margin-top: 5%;
+}
+
+mat-card-subtitle {
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+.btn {
+    font-size: 18px;
+    background-color: #BDC6D1;
+    color: #5C6378;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    width: 150px;
+}
+

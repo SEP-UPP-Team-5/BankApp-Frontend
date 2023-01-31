@@ -8,6 +8,11 @@ export const AppConstants = {
    MERCHANT: {
         ADD: '/merchants',
         GET: '/merchants',
+   },
+   PAYMENT: {
+    EXECUTE: '/payment/execute',
+    QR: '/payment/execute/qrPayment',
+    GET_QR: '/qrCode'
    }
 
 }
