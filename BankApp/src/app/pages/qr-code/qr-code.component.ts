@@ -36,7 +36,7 @@ export class QrCodeComponent  implements OnInit {
     console.log(this.img, "IMG")
     this.paymentService.executeQr(this.img).subscribe((res: any) => {
       console.log(res);
-      //window.location.href = res.url;
+      window.location.href = res.url + res.merchantOrderId;
     }
   )}
 
