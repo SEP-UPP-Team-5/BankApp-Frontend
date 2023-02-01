@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { AppConstants } from 'src/utils/constants';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,12 @@ export class PaymentService {
       }))
   }
 
-  executeQr(img: any) {
+  executeQr(img: File) : Observable<HttpEvent<{}>> {
+    const data: FormData = new FormData();
+    data.append('image', img);
+
     const apiUrl = AppConstants.API_HOST + AppConstants.PAYMENT.QR;
-    return this.http.post(apiUrl, img).pipe(map((item: any) => {
+    return this.http.post(apiUrl, data).pipe(map((item: any) => {
        return item;
       }))
   }
