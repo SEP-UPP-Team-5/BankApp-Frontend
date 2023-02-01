@@ -48,7 +48,6 @@ export class CardInfoComponent implements OnInit {
     cardInfo.paymentId = this.id;
 
     this.paymentService.execute(cardInfo).subscribe((res: any) => {
-      console.log(res);
       window.location.href = res.url + res.merchantOrderId;
     }
   )}

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { AppConstants } from 'src/utils/constants';
@@ -19,7 +19,9 @@ export class PaymentService {
 
   executeQr(img: any) {
     const apiUrl = AppConstants.API_HOST + AppConstants.PAYMENT.QR;
-    return this.http.post(apiUrl, img).pipe(map((item: any) => {
+    const formData = new FormData
+    formData.append('file', img)
+    return this.http.post(apiUrl, formData).pipe(map((item: any) => {
        return item;
       }))
   }
